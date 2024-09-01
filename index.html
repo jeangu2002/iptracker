@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="search-bar">
+          <h1 class="heading">IP Address Tracker</h1>
+          <div class="input-container">
+            <input
+              type="text"
+              name=""
+              placeholder="Search for an IP address or domain"
+              id="search-input"
+              class="input-search"
+            />
+            <button aria-label="search button" class="search-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="3"
+                  d="M2 1l6 6-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="map"></div>
+      </div>
+    </main>
+
+    <template id="search-result-template">
+      <div class="search-result">
+        <div class="ip-address">
+          <strong>ip address</strong>
+          <p></p>
+        </div>
+        <div class="location">
+          <strong>location</strong>
+          <p></p>
+        </div>
+        <div class="timezone">
+          <strong>timezone</strong>
+          <p></p>
+        </div>
+        <div class="isp">
+          <strong>isp</strong>
+          <p></p>
+        </div>
+      </div>
+    </template>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
